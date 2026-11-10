@@ -1,4 +1,4 @@
-from app.core.config import get_settings
+'''from app.core.config import get_settings
 
 settings=get_settings()
 
@@ -14,3 +14,9 @@ print(len(chunks))
 from app.rag.vectorstore import add_documents
 
 add_documents(chunks)
+'''
+
+import uvicorn
+
+if __name__=="__main__":
+    uvicorn.run("app.main:app",host="127.0.0.1", port=8000,reload=True)
